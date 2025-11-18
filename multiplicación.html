@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplicación de tres números</title>
+</head>
+<body>
+  <h2>Multiplicación de tres números</h2>
+
+  <!-- Formulario -->
+  <form id="calc" name="calc">
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+
+    <label for="num3">Número 3:</label>
+    <input type="number" id="num3" name="num3"><br><br>
+
+    <input type="button" value="Multiplicar" onclick="multiplicar()"><br><br>
+
+    <label for="resultado">Resultado:</label>
+    <input type="text" id="resultado" name="resultado" readonly value="0">
+  </form>
+
+  <!-- Script de JavaScript -->
+  <script>
+    function multiplicar() {
+      let n1 = document.calc.num1.value;
+      let n2 = document.calc.num2.value;
+      let n3 = document.calc.num3.value;
+
+      let resultado = n1 * n2 * n3;
+      document.calc.resultado.value = resultado;
+    }
+  </script>
+</body>
+</html>
